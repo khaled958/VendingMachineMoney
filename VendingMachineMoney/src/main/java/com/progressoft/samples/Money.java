@@ -58,7 +58,7 @@ public class Money {
         else if(subtraction>0 && (!ChangeOperation(map,subtraction) && !ChangeOperation(map,other.amount()))){
                 throw new IllegalArgumentException("Cent are not enough for the change");
         }
-        Money money = new Money(this.amount-other.amount());
+        Money money = new Money(subtraction);
         money.map = this.map;
         return money;
     }
